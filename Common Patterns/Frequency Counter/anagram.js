@@ -1,5 +1,5 @@
-// using frequency counter pattern 
-// TC = O(N)
+// using frequency counter pattern - my solution 
+// TC = O(3N) => O(N)
 function validAnagram(str1, str2) {
 
     if(str1.length === 0 && str2.length === 0) return true;
@@ -28,11 +28,43 @@ function validAnagram(str1, str2) {
     return true;
 }
 
-console.log(validAnagram('', ''));
-console.log(validAnagram('aaz', 'zza'));
-console.log(validAnagram('anagram', 'nagaram'));
-console.log(validAnagram('rat', 'car'));
-console.log(validAnagram('awesome', 'awesom'));
-console.log(validAnagram('qwerty', 'qeywrt'));
-console.log(validAnagram('texttwisttime', 'timetwisttext'));
+// console.log(validAnagram('', ''));
+// console.log(validAnagram('aaz', 'zza'));
+// console.log(validAnagram('anagram', 'nagaram'));
+// console.log(validAnagram('rat', 'car'));
+// console.log(validAnagram('awesome', 'awesom'));
+// console.log(validAnagram('qwerty', 'qeywrt'));
+// console.log(validAnagram('texttwisttime', 'timetwisttext'));
 
+// *************************************************************************************************
+
+// Refactor solution
+// TC = O(2N) => O(N)
+function validAnagramRefactor(str1, str2) {
+    if(str1.length !== str2.length) return false;
+
+    let lookup = {};
+
+    for(let val of str1) { // O(N)
+        lookup[val] = (lookup[val] || 0) + 1;
+    }
+
+    for(let val in str2) { // O(N)
+
+        if(!(val in str1)) return false;
+        else {
+            lookup[val]--;
+        }
+    }
+
+    return true;
+}
+
+
+console.log(validAnagramRefactor('', ''));
+console.log(validAnagramRefactor('aaz', 'zza'));
+console.log(validAnagramRefactor('anagram', 'nagaram'));
+console.log(validAnagramRefactor('rat', 'car'));
+console.log(validAnagramRefactor('awesome', 'awesom'));
+console.log(validAnagramRefactor('qwerty', 'qeywrt'));
+console.log(validAnagramRefactor('texttwisttime', 'timetwisttext'));

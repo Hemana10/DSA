@@ -1,4 +1,5 @@
 // same_naive (not the most efficient solution)
+// TC = O(N * (N + N)) = O(N * (2N)) => O(N ^ 2) Quadratic time
 
 function sameNaive(arr1, arr2) {
     if(arr1.length !== arr2.length) return false;
@@ -13,9 +14,10 @@ function sameNaive(arr1, arr2) {
 
 // console.log(sameNaive([1, 2, 3, 2], [9, 1, 4, 4]));
 
-// TC = O(N * (N + N)) = O(N * (2N)) => O(N ^ 2) Quadratic time
-
 // *************************************************************************************************
+
+// TC = O(3N) => O(N)
+// all operations used with objects are O(1)
 
 function sameRefactor(arr1, arr2) {
     if(arr1.length !== arr2.length) return false;
@@ -43,6 +45,3 @@ function sameRefactor(arr1, arr2) {
 }
 
 console.log(sameRefactor([1, 2, 3, 2, 5], [9, 1, 4, 4, 11]));
-
-// TC = O(3N) => O(N)
-// all operations used with objects are O(1)
