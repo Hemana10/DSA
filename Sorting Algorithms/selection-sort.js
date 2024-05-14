@@ -3,7 +3,7 @@ const swap = (arr, i, j) => (
 );
 
 // TC =` O(n ^ 2) but a bit better we slide the window
-// better than bubble sort we swap only after finding minindex
+// better than bubble sort we swap only after finding minindex, no of swaps lesser
 
 function selectionSort(arr) {
 
