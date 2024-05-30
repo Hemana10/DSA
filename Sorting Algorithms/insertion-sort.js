@@ -1,6 +1,8 @@
-const swap = (arr, i, j) => (
-    [arr[i], arr[j]] = [arr[j], arr[i]]
-);
+// insertion sort
+// outer loop is the pick a num, store it and find its position on the left side of the array, this will always keep left side sorted.
+// inner loop is to go through elements before ith index until 0th index
+// if val is lesser than any numner on left, move those numbers by one position to make space in the correct position.
+// finally put the currentVal in the correct position.
 
 
 // TC =` O(n ^ 2), works better for almost sorted arrays, and live sorting of arrays

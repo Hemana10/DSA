@@ -1,7 +1,8 @@
+// linear search
+// loop through, if index matches return index, else return -1
 // TC = O(N)
 
 function linearSearch(arr, item){
-    // add whatever parameters you deem necessary - good luck!
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === item) {
             return i;

@@ -1,3 +1,9 @@
+// merge sort 
+// split up the array at mid recursively,sort it and merge it.
+// left => 0,mid & right => mid.
+// mid should never reach a posibility of 0, then it will recursively call the same array over and over again, the call stack will exceed.
+// arr.length/2 not start and end.
+
 // TC = O(2m + 2n) = O(2(m + n)) remove constants= O(n + m)
 // Sc = O(n + m)
 function merge(arr1, arr2) {

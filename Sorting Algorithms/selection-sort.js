@@ -1,3 +1,8 @@
+// selection sort 
+// try to find the minimum in the array and put it at the lowest idx
+// with each outer loop, the smallest keeps getting sorted to the lower indexes
+// inner can start after the sorted elements.
+
 const swap = (arr, i, j) => (
     [arr[i], arr[j]] = [arr[j], arr[i]]
 );

@@ -1,3 +1,8 @@
+// Radix sort
+// find the maxdigitCount in the array, array needs to be looped that many times to get all digits in position
+// then loop through each num in the array and put in the bucket at the kth digit position
+// then get it back into arr format before going to next loop.
+
 // doing base 10 number, 1s place, 10s place, any other base user can mention
 function getDigit(num, i) {
     return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;

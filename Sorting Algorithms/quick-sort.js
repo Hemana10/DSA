@@ -1,3 +1,11 @@
+// quick sort
+// findpivot
+// need to retain the initial pivot where it is so that it is still available to be  moved to the position it should be in.
+// loop is used to moving everything based on the pivot position, anything that is smaller should go to the pivot position.
+// later swap the small number at pivot position to have pivot at the correct position.
+// quicksort
+// sort the left and right of pivot recursively, by finding pivot for each side over & over again until left < right (base case)
+
 // TC = O(n)
 function pivot(arr, start = 0, end = arr.length - 1) {
     const swap = (arr, i, j) => {
@@ -7,7 +15,7 @@ function pivot(arr, start = 0, end = arr.length - 1) {
     let pivot = arr[start];
     let swapIdx = start;
 
-    for(let i = start+1; i < arr.length; i++) {
+    for(let i = start+1; i <= end; i++) {
         if(pivot > arr[i]) {
             swapIdx++;
             swap(arr, swapIdx, i);

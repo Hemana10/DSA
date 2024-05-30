@@ -1,3 +1,8 @@
+// bubble sort
+// bubble highest value to top each inner loop by moving(swapping) any found higher value
+// outer loop starts from end of array, each time the end of array would be sorted, so no need to run inner loop till that point
+// keep noswaps flag and breakthrough from array when not neccessary
+
 const swap = (arr, i, j) => (
     [arr[i], arr[j]] = [arr[j], arr[i]]
 );
